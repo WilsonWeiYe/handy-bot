@@ -1,4 +1,8 @@
 import discord
+import config
+from discord .ext import commands
+
+description = """A handle bot to tackle any problem"""
 
 class MyClient(discord.Client):
     async def on_ready(self):
@@ -15,4 +19,4 @@ class MyClient(discord.Client):
 intents = discord.Intents.default()
 intents.message_content = True
 client = MyClient(intents=intents)
-client.run('token')
+client.run(config.bot_token)
